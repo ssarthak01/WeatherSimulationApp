@@ -15,6 +15,24 @@
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
+    <welcome-file>NY.html</welcome-file>
+    <welcome-file>NY.htm</welcome-file>
+    <welcome-file>NY.jsp</welcome-file>
+    <welcome-file>LA.html</welcome-file>
+    <welcome-file>LA.htm</welcome-file>
+    <welcome-file>LA.jsp</welcome-file>
+    <welcome-file>ATL.html</welcome-file>
+    <welcome-file>ATL.htm</welcome-file>
+    <welcome-file>ATL.jsp</welcome-file>
+    <welcome-file>DEN.html</welcome-file>
+    <welcome-file>DEN.htm</welcome-file>
+    <welcome-file>DEN.jsp</welcome-file>
+    <welcome-file>SEA.html</welcome-file>
+    <welcome-file>SEA.htm</welcome-file>
+    <welcome-file>SEA.jsp</welcome-file>
+    <welcome-file>MIA.html</welcome-file>
+    <welcome-file>MIA.htm</welcome-file>
+    <welcome-file>MIA.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>

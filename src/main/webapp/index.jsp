@@ -15,11 +15,11 @@
 
 <body>
 	<nav class="navbar navbar-expand-sm bg-dark">
-
+		<a class="navbar-brand " href="#" style="color:gray">The Weather Station</a>
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.jsp">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">API</a>
@@ -31,17 +31,11 @@
         <!-- Content here -->
         <h1>Weather Station App - 
             <small >Please select a city below!</small>
+          
         </h1>
-        <!-- <div class="card" style="width: 350px">
-            <div class="card-body">
-            	 <img src="https://www.telegraph.co.uk/content/dam/Travel/2019/June/la-observatory.jpg?imwidth=960"
-            height="300" width="300" class="mx-auto d-block">
-            </div>
-        </div> -->
     </div>
     
     <div class="container" style="margin-top: 100px">
-    
         <h4 style="margin-bottom: 50px">Cities</h4>
         <div class="row flex-row flex-nowrap">
             <div class="col-3">
@@ -51,8 +45,11 @@
                     <h6 class="card-title">Los Angeles</h6>
                     <p class="card-text" class="h8"> California, United States
                     </p>
+                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <form action="LA.jsp">
+    					<input type="submit" value="View" style="width: 253px" />
+					</form>
                 </div>
-
             </div>
             <div class="col-3">
                 <div class="card card-block">
@@ -61,6 +58,10 @@
                     <h6 class="card-title">New York City</h6>
                     <p class="card-text" class="h8"> New York, United States
                     </p>
+                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <form action="NY.jsp">
+    					<input type="submit" value="View" style="width: 253px" />
+					</form>
                 </div>
 
             </div>
@@ -71,11 +72,14 @@
                     <h6 class="card-title">Atlanta</h6>
                     <p class="card-text" class="h8"> Georgia, United States
                     </p>
+                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <form action="ATL.jsp">
+    					<input type="submit" value="View" style="width: 253px" />
+					</form>
                 </div>
 
             </div>
-        </div>
-        
+        </div> 
         <div class="row flex-row flex-nowrap" style="margin-top: 50px">
             <div class="col-3">
                 <div class="card card-block">
@@ -84,6 +88,10 @@
                     <h6 class="card-title">Denver</h6>
                     <p class="card-text" class="h8"> Colorado, United States
                     </p>
+                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <form action="DEN.jsp">
+    					<input type="submit" value="View" style="width: 253px" />
+					</form>
                 </div>
 
             </div>
@@ -94,6 +102,10 @@
                     <h6 class="card-title">Seatlle</h6>
                     <p class="card-text" class="h8"> Washington, United States
                     </p>
+                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <form action="SEA.jsp">
+    					<input type="submit" value="View" style="width: 253px" />
+					</form>
                 </div>
 
             </div>
@@ -104,12 +116,19 @@
                     <h6 class="card-title">Miami</h6>
                     <p class="card-text" class="h8"> Florida, United States
                     </p>
+                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <form action="MIA.jsp">
+    					<input type="submit" value="View" style="width: 253px" />
+					</form>
                 </div>
 
             </div>
         </div>
     </div>
-	
+    <footer class="bg-light text-center text-lg-start" style="margin-top: 100px">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            <p>Weather Station Web App - Sarthak Shukla & Shane O'Hagan</p>
+        </div>
+    </footer>
 </body>
-
 </html>
