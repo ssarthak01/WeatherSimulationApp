@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.util.Random, webpage_package.*"%>    
 <!DOCTYPE html>
 <html>
 
@@ -34,7 +36,10 @@
           
         </h1>
     </div>
-    
+    <%
+		WebPageFactory factory = new WebPageFactory();
+		WebPageCreator wc = new WebPageCreator(factory);
+	%>
     <div class="container" style="margin-top: 100px">
         <h4 style="margin-bottom: 50px">Cities</h4>
         <div class="row flex-row flex-nowrap">
@@ -46,8 +51,18 @@
                     <p class="card-text" class="h8"> California, United States
                     </p>
                     <p><%= (new java.util.Date()).toLocaleString()%></p>
-                    <form action="LA.jsp">
+                    <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
+    					<%
+						WebPage LApage = wc.generateWebPage("LA");
+						String data[] = LApage.generation();
+						String cityName = data[0].toString();
+						String cityPhoto = data[1].toString();
+						String cityDateTime = data[2].toString();
+						%>
+						<input type="hidden" name="nameid" value= ' <%= cityName%> '>
+						<input type="hidden" name="photoid" value= ' <%= cityPhoto%> '>
+						<input type="hidden" name="datetimeid" value= ' <%= cityDateTime%> '>
 					</form>
                 </div>
             </div>
@@ -59,8 +74,18 @@
                     <p class="card-text" class="h8"> New York, United States
                     </p>
                     <p><%= (new java.util.Date()).toLocaleString()%></p>
-                    <form action="NY.jsp">
+                    <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
+    					<%
+						WebPage NYpage = wc.generateWebPage("NY");
+						data = NYpage.generation();
+						cityName = data[0].toString();
+						cityPhoto = data[1].toString();
+						cityDateTime = data[2].toString();
+						%>
+						<input type="hidden" name="nameid" value= ' <%= cityName%> '>
+						<input type="hidden" name="photoid" value= ' <%= cityPhoto%> '>
+						<input type="hidden" name="datetimeid" value= ' <%= cityDateTime%> '>
 					</form>
                 </div>
 
@@ -73,8 +98,18 @@
                     <p class="card-text" class="h8"> Georgia, United States
                     </p>
                     <p><%= (new java.util.Date()).toLocaleString()%></p>
-                    <form action="ATL.jsp">
+                    <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
+    					<%
+						WebPage ATLpage = wc.generateWebPage("ATL");
+						data = ATLpage.generation();
+						cityName = data[0].toString();
+						cityPhoto = data[1].toString();
+						cityDateTime = data[2].toString();
+						%>
+						<input type="hidden" name="nameid" value= ' <%= cityName%> '>
+						<input type="hidden" name="photoid" value= ' <%= cityPhoto%> '>
+						<input type="hidden" name="datetimeid" value= ' <%= cityDateTime%> '>
 					</form>
                 </div>
 
@@ -89,8 +124,18 @@
                     <p class="card-text" class="h8"> Colorado, United States
                     </p>
                     <p><%= (new java.util.Date()).toLocaleString()%></p>
-                    <form action="DEN.jsp">
+                    <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
+    					<%
+						WebPage DENpage = wc.generateWebPage("DEN");
+						data = DENpage.generation();
+						cityName = data[0].toString();
+						cityPhoto = data[1].toString();
+						cityDateTime = data[2].toString();
+						%>
+						<input type="hidden" name="nameid" value= ' <%= cityName%> '>
+						<input type="hidden" name="photoid" value= ' <%= cityPhoto%> '>
+						<input type="hidden" name="datetimeid" value= ' <%= cityDateTime%> '>
 					</form>
                 </div>
 
@@ -103,8 +148,18 @@
                     <p class="card-text" class="h8"> Washington, United States
                     </p>
                     <p><%= (new java.util.Date()).toLocaleString()%></p>
-                    <form action="SEA.jsp">
+                    <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
+    					<%
+						WebPage SEApage = wc.generateWebPage("SEA");
+						data = SEApage.generation();
+						cityName = data[0].toString();
+						cityPhoto = data[1].toString();
+						cityDateTime = data[2].toString();
+						%>
+						<input type="hidden" name="nameid" value= ' <%= cityName%> '>
+						<input type="hidden" name="photoid" value= ' <%= cityPhoto%> '>
+						<input type="hidden" name="datetimeid" value= ' <%= cityDateTime%> '>
 					</form>
                 </div>
 
@@ -117,8 +172,17 @@
                     <p class="card-text" class="h8"> Florida, United States
                     </p>
                     <p><%= (new java.util.Date()).toLocaleString()%></p>
-                    <form action="MIA.jsp">
+                    <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
+    					<%
+						WebPage MIApage = wc.generateWebPage("MIA");
+						cityName = data[0].toString();
+						cityPhoto = data[1].toString();
+						cityDateTime = data[2].toString();
+						%>
+						<input type="hidden" name="nameid" value= ' <%= cityName%> '>
+						<input type="hidden" name="photoid" value= ' <%= cityPhoto%> '>
+						<input type="hidden" name="datetimeid" value= ' <%= cityDateTime%> '>
 					</form>
                 </div>
 

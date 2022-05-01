@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.Random, webpage_package.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,16 +27,20 @@
 	        </ul>
 	</nav>
     
-    
+    <% 
+    	String cityName = request.getParameter("nameid").toString();
+    	String cityImage = request.getParameter("photoid").toString();
+    	String cityDateTime = request.getParameter("datetimeid").toString();
+    %>
     <div class="container" style="margin-top: 50px">    
         <div class="row flex-row flex-nowrap">
                 <div class="card card-block" style="width: 1000px">
                 	<div class="card-header">
-    					<h2>Miami, Floria, United States </h2>
+    					<h2><%= cityName%> </h2>
   					</div>
-                    <img class="card-img-top" src="https://www.miamigov.com/files/sharedassets/public/news/2020/miami-shutterstock-01.jpg?dimension=pageimage&w=480"
+                    <img class="card-img-top" src=<%=cityImage%>
                         height="200px" width="800">
-                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                   	<p><%= cityDateTime%></p>
 					<div class="dropdown">
 					  <button style= "width: 996px" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					    Filter Options 
@@ -80,7 +84,7 @@
 		  <div class="col-sm-3" style="margin-top: 40px">
 		    <div class="card">
 		      <div class="card-body">
-		        <h5 class="card-title">Preciptation</h5>
+		        <h5 class="card-title">Precipitation</h5>
 		        <p class="card-text">Data</p>
 		        <a href="#" class="btn btn-primary">Go somewhere</a>
 		      </div>
@@ -100,7 +104,8 @@
 	  <li class="list-group-item" style="height: 90px">
 	  Past Forecast
 	  <p style="margin-top: 20px">Data</p>
-	  </li>
+	  </li> 
+	 
 	</ul>
 
 </div>

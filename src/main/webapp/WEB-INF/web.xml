@@ -33,6 +33,9 @@
     <welcome-file>MIA.html</welcome-file>
     <welcome-file>MIA.htm</welcome-file>
     <welcome-file>MIA.jsp</welcome-file>
+    <welcome-file>TemplateCity.html</welcome-file>
+    <welcome-file>TemplateCity.htm</welcome-file>
+    <welcome-file>TemplateCity.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
