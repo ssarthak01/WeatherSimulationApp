@@ -1,8 +1,6 @@
 package webpage_package;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import template_datetime.GMT7DateTime;
 
 public class LAWebPage extends WebPage{
 	public String getCityName() {
@@ -14,10 +12,7 @@ public class LAWebPage extends WebPage{
 	}
 	
 	public String getCityDateTime() {
-		Date date = new Date();
-		SimpleDateFormat df = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss z");
-		df.setTimeZone(TimeZone.getTimeZone("GMT-7"));
-		String dateTime = df.format(date);
-		return dateTime;
+		GMT7DateTime gmt7 = new GMT7DateTime();
+		return gmt7.createDateTime();
 	}
 }

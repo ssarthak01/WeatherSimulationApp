@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.Random, webpage_package.*"%>    
+    pageEncoding="UTF-8" import="template_datetime.*, webpage_package.*"%>    
 <!DOCTYPE html>
 <html>
 
@@ -39,6 +39,12 @@
     <%
 		WebPageFactory factory = new WebPageFactory();
 		WebPageCreator wc = new WebPageCreator(factory);
+		GMT4DateTime gmt4 = new GMT4DateTime();
+		GMT6DateTime gmt6 = new GMT6DateTime();
+		GMT7DateTime gmt7 = new GMT7DateTime();
+		String gmt4_datetime = gmt4.createDateTime();
+		String gmt6_datetime = gmt6.createDateTime();	
+		String gmt7_datetime = gmt7.createDateTime();
 	%>
     <div class="container" style="margin-top: 100px">
         <h4 style="margin-bottom: 50px">Cities</h4>
@@ -50,7 +56,7 @@
                     <h6 class="card-title">Los Angeles</h6>
                     <p class="card-text" class="h8"> California, United States
                     </p>
-                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <p><%= gmt7_datetime%></p>
                     <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
     					<%
@@ -73,7 +79,7 @@
                     <h6 class="card-title">New York City</h6>
                     <p class="card-text" class="h8"> New York, United States
                     </p>
-                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <p><%= gmt4_datetime %> </p> 
                     <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
     					<%
@@ -97,7 +103,7 @@
                     <h6 class="card-title">Atlanta</h6>
                     <p class="card-text" class="h8"> Georgia, United States
                     </p>
-                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <p><%= gmt4_datetime %></p>
                     <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
     					<%
@@ -123,7 +129,7 @@
                     <h6 class="card-title">Denver</h6>
                     <p class="card-text" class="h8"> Colorado, United States
                     </p>
-                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <p><%= gmt6_datetime %></p>
                     <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
     					<%
@@ -147,7 +153,7 @@
                     <h6 class="card-title">Seatlle</h6>
                     <p class="card-text" class="h8"> Washington, United States
                     </p>
-                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <p><%= gmt7_datetime %></p>
                     <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
     					<%
@@ -171,7 +177,7 @@
                     <h6 class="card-title">Miami</h6>
                     <p class="card-text" class="h8"> Florida, United States
                     </p>
-                    <p><%= (new java.util.Date()).toLocaleString()%></p>
+                    <p><%= gmt4_datetime %></p>
                     <form action="TemplateCity.jsp" method="post">
     					<input type="submit" value="View" style="width: 253px" />
     					<%
